@@ -7,12 +7,10 @@ export const environment = {
   firebase: {
     apiKey: "AIzaSyBuikOa5HwPhxCfkK1goI3Vb2LTir2dDKg",
     authDomain: "kanban-francol.firebaseapp.com",
-    databaseURL: 'https://console.firebase.google.com/u/0/project/kanban-francol/database/kanban-francol-default-rtdb/data/~2F?hl=es',
     projectId: "kanban-francol",
     storageBucket: "kanban-francol.appspot.com",
     messagingSenderId: "213487000271",
-    appId: "1:213487000271:web:fe2addef008427711235ba",
-    measurementId: '<your-measurement-id>'
+    appId: "1:213487000271:web:fe2addef008427711235ba"
   }
 };
 /*

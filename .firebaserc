@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "kanban-francol": {
+      "hosting": {
+        "Kanban": [
+          "kanban-francol"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "kanban-francol"
+  }
+}
