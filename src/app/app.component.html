@@ -1,0 +1,73 @@
+<!-- <input type="text" required #hola="ngModel" [(ngModel)]="person.name">
+<p class="error" [class.invalid]="hola.invalid">es requerido</p>
+<label>nombre</label>
+<input type="text" required #hola2="ngModel" [(ngModel)]="person.name">
+<p [style.font-style]="hola2.invalid ? 'italic' : 'normal'">ahimajueahimaueahimaueahimaue</p>
+<div>
+  <div>
+    <input type="text" [(ngModel)]="witimg">
+  </div>
+  <div>
+    <img [style.width.px]="witimg" [src]="avatar">
+  </div>
+</div>
+<hr> -->
+<div class="a">
+  <div class="contprinci">
+    <div class="listas">
+      <div>
+        <p> tareas por completar</p>
+        <ul>
+          <li *ngIf="tarea.length === 0 "> algo tendras que hacer</li>
+          <li *ngFor="let tarea of tarea; index as i" class="aaa">
+            {{tarea}}
+          <button (click)="borrarcomp(i , 1)">borrar</button>
+          <button (click)="completada(i , 1)">en proceso</button>
+          </li>
+        </ul>
+      </div>
+      <!-- <div>
+        <p> ultima tarea completada</p>
+        <ul>
+          <li *ngFor="let tareacomp of tareacomp; index as i" class="aaa">
+          {{tareacomp}}
+          <button (click)="borrarcomp(i , 1)">eliminar</button>
+          </li>
+      </ul>
+      </div> -->
+      <div>
+        <p> tareas en proceso</p>
+        <ul>
+          <li *ngIf="InProcess.length === 0 "> bien ahi</li>
+          <li *ngFor="let InProcess of InProcess; index as i" class="aaa">
+            {{InProcess}}
+          <button (click)="borrarcomp(i, 2)">borrar</button>
+          <button (click)="completada(i , 2)">completada</button>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p>  tareas completadas</p>
+        <ul>
+          <li *ngFor="let tareacomp of tareacomp; index as i" class="aaa">
+          {{tareacomp}}
+          <button (click)="borrarcomp(i , 3)">eliminar</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="nuevo">
+      <div>
+      <input type="text" [(ngModel)]="numero">
+      <button (click)="otronumero()">añadir cosa para hacer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<ul>
+  <li class="text" *ngFor="let item of items | async">
+    {{item.name}}
+  </li>
+</ul>
