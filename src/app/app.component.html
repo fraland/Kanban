@@ -67,7 +67,9 @@
 
 
 <ul>
-  <li class="text" *ngFor="let item of items | async">
-    {{item.name}}
+  <li id="posts" class="text" *ngFor="let item of posts | async">
+    titulo del post: {{item.title}} <br>
+    autor: {{item.author}} <br>
+    post: {{item.content}}  <br>
   </li>
 </ul>

@@ -9,9 +9,9 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  items: Observable<any[]>;
+  posts: Observable<any[]>;
   constructor(firestore: AngularFirestore){
-    this.items = firestore.collection('items').valueChanges();
+    this.posts = firestore.collection('posts').valueChanges();
   }
 
   tareacomp:string[] = ['']
