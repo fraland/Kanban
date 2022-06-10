@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 export class AppComponent {
   posts: Observable<any[]>;
   constructor(firestore: AngularFirestore){
-    this.posts = firestore.collection('posts').valueChanges();
+    this.posts = firestore.collection('posts').snapshotChanges().pipe(tap(data => console.log(data)));
   }
 
   tareacomp:string[] = ['']
