@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PostComponent } from './post/post.component';
+import { PostsComponent } from './posts/posts.component';
+import { ListatareasComponent } from './listatareas/listatareas.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  {
-    path: 'post/:id',
-    component: PostComponent,
-  }
+  {  path: 'home',  component: HomeComponent},
+  {  path: 'post',  component: PostsComponent},
+  {  path: 'listatareas',  component: ListatareasComponent},
+  {  path: ' ',  redirectTo: '/home', pathMatch: 'full'},
 ];
 
 @NgModule({

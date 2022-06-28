@@ -1,0 +1,9 @@
+<ul>
+  <li [routerLink]="['post',item.payload.doc.id]" id="posts" class="text" *ngFor="let item of posts | async">
+    titulo del post: {{item.payload.doc.data().title}} <br>
+    autor: {{item.payload.doc.data().author}} <br>
+    id: {{item.payload.doc.id}} <br>
+    post: {{item.payload.doc.data().content}}  <br>
+    tipo: {{item.type}}  <br>
+  </li>
+</ul>
